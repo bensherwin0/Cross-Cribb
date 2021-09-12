@@ -27,8 +27,8 @@ class MonteCarlo {
        g1.cribb[i] = cribb[i]; 
     }
     int index = g1.p1.size() + g1.p2.size();
-    while (!g1.isOver()) { //println(g1.legalMoves);
-      int move = g1.legalMoves.get((int)(Math.random() * g1.legalMoves.size())); //println(move + " " + g1.currPlayer);
+    while (!g1.isOver()) {
+      int move = g1.legalMoves.get((int)(Math.random() * g1.legalMoves.size()));
       Card c = g1.getNextCard();
       if (move == -1) g1.addToCribb(c);
       else g1.addToBoard(c, (move % 5), (move / 5));
