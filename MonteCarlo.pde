@@ -63,7 +63,7 @@ class MonteCarlo {
           }
         }
         Game g1 = new Game(g, d);
-        int move = g.legalMoves.get(index); //println(move + " " + g.currPlayer);
+        int move = g.legalMoves.get(index);
         if (move == -1) {
           g1.addToCribb(new Card(c.rank, c.suit));
           updateCribb(new Card(c.rank, c.suit));
@@ -77,7 +77,6 @@ class MonteCarlo {
       int max = -1;
       int index = -1;
       for (int i = 0; i < movechecked.length; i++) {
-        //println(g.legalMoves.get(i) + ": " + movechecked[i] + " " + (movevals[i]/movechecked[i]));
         if (movechecked[i] > max) {
           max = movechecked[i];
           index = i;
